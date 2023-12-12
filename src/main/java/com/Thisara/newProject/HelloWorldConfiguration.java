@@ -11,26 +11,31 @@ record Address(String firstlane, String city) {};
 public class HelloWorldConfiguration {
 
     @Bean
-    public String name(){
+    public String name() {
         return "Thisara";
     }
 
     @Bean
-    public int age(){
+    public int age() {
         return 21;
     }
 
-    @Bean
-    public Person person(){
-        var person = new Person("Thisara",21);
+    @Bean(name = "person1")
+    public Person person() {
+        var person = new Person("Kamal", 22);
 //        person.age(); it includes all get set methods (record)
 //        person.name();
         return person;
     }
 
-    @Bean
-    public Address address(){
-        var address = new Address("303 new kandy road","Colombo");
+    @Bean(name = "address2")
+    public Address address() {
+        var address = new Address("303 new kandy road", "Colombo");
         return address;
+    }
+
+    @Bean(name = "person2")
+    public Person person2MethodCall() {
+        return new Person(name(), age());
     }
 }

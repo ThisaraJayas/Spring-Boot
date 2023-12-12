@@ -10,8 +10,9 @@ public class App02GammingBasicJava {
 
 		System.out.println(Context.getBean("name"));
 		System.out.println(Context.getBean("age"));
-		System.out.println(Context.getBean("person"));
-		System.out.println(Context.getBean("address"));
+		System.out.println(Context.getBean("person1"));
+		System.out.println(Context.getBean("address2"));
+		System.out.println(Context.getBean("person2"));
 
 
 
