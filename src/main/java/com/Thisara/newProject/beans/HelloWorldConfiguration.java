@@ -1,4 +1,4 @@
-package com.Thisara.newProject;
+package com.Thisara.newProject.beans;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

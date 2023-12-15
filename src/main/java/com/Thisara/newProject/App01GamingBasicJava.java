@@ -1,18 +1,23 @@
 package com.Thisara.newProject;
 
-import com.Thisara.newProject.game.GameRunner;
-import com.Thisara.newProject.game.MarioGame;
-import com.Thisara.newProject.game.PackmanGame;
-import com.Thisara.newProject.game.SuperContraGame;
+import com.Thisara.newProject.game.*;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class App01GamingBasicJava {
 
 	public static void main(String[] args) {
-		//var game = new MarioGame();
-		//var game = new SuperContraGame();
-		var game = new PackmanGame();
-		var gameRunner = new GameRunner(game);
-		gameRunner.run();
+
+		try(var Context = new AnnotationConfigApplicationContext(GamingConfiguration.class)){
+			Context.getBean(GameConsole.class).up();
+			Context.getBean(GameRunner.class).run();
+		}
+
+
+//		//var game = new MarioGame();
+//		//var game = new SuperContraGame();
+//		var game = new PackmanGame();
+//		var gameRunner = new GameRunner(game);
+//		gameRunner.run();
 
 	}
 

@@ -1,4 +1,4 @@
-package com.Thisara.newProject;
+package com.Thisara.newProject.beans;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -13,6 +13,7 @@ public class App02GammingBasicJava {
 		System.out.println(Context.getBean("person1"));
 		System.out.println(Context.getBean("address2"));
 		System.out.println(Context.getBean("person2"));
+
 
 
 
